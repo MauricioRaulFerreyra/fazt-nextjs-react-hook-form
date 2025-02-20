@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Form with Shadcn/UI
 
-## Getting Started
+A modern, type-safe form implementation using Next.js, Shadcn/UI, TypeScript, Tailwind CSS, Zod, and React Hook Form.
 
-First, run the development server:
+## Features
+
+- 🎨 Modern UI components with Shadcn/UI
+- 🔒 Type-safe form handling with TypeScript
+- ✅ Form validation using Zod
+- 🎯 Efficient form management with React Hook Form
+- 💅 Styling with Tailwind CSS
+- 📱 Responsive design
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [Shadcn/UI](https://ui.shadcn.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Zod](https://zod.dev/)
+- [React Hook Form](https://react-hook-form.com/)
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+## Installation
+
+1. Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd <your-project-name>
+```
+
+2 . Install dependencies
+
+```bash
+npm install
+# or
+bun install
+```
+
+3 . Start the development server
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+├── components/
+│   └── ui/          # Shadcn/UI components
+├── app/
+│   └── page.tsx     # Main form component
+└── ...
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Form Features
 
-## Learn More
+- Username validation
+  - Minimum 2 characters
+  - Maximum 30 characters
+- Real-time form validation
+- Error messages
+- Clean and responsive UI
+- Custom styling with Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The form component provides:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Input validation using Zod schema
+- Responsive card layout
+- Error handling and display
+- Custom styling with Tailwind CSS
 
-## Deploy on Vercel
+Example schema:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```typescript
+const formSchema = z.object({
+  username: z
+    .string()
+    .min(2, {
+      message: "Username must be at least 2 characters",
+    })
+    .max(30),
+});
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Styling
+
+The project uses Tailwind CSS for styling with custom configurations for:
+
+- Form inputs
+- Buttons
+- Cards
+- Typography
+- Responsive design
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
