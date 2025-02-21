@@ -25,14 +25,14 @@ A modern, type-safe form implementation using Next.js, Shadcn/UI, TypeScript, Ta
 Make sure you have the following installed:
 
 - Node.js (v16 or higher)
-- npm or yarn
+- npm or bun
 
 ## Installation
 
 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/MauricioRaulFerreyra/fazt-nextjs-react-hook-form.git
 cd <your-project-name>
 ```
 
@@ -49,7 +49,7 @@ bun install
 ```bash
 npm run dev
 # or
-bun dev
+bun run dev
 ```
 
 ## Project Structure
